@@ -12,8 +12,9 @@ const App = () => {
   };
 
   const innerContainer = {
-    flexDirection: "row",
-    width: "100%"
+    flexDirection: "column",
+    width: "100%",
+    margin: "none"
   };
 
   return (
