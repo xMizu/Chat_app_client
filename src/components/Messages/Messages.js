@@ -4,7 +4,7 @@ import "./Messages.css";
 
 const Messages = props => {
   const messageList = props.messages.map((msg, i) => (
-    <Message key={i} msg={msg} />
+    <Message key={i} msg={msg.text} user={msg.user} />
   ));
   return <div className="messagesList">{messageList}</div>;
 };

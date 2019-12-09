@@ -1,10 +1,16 @@
 import React from "react";
 import "./Input.css";
 
-const Chat = ({ text, socket, setText }) => {
+const Chat = ({ text, socket, setText, user }) => {
   const submitHandler = e => {
     e.preventDefault();
-    socket.emit("sendMsg", text, () => {
+
+    let data = {
+      text,
+      user
+    };
+
+    socket.emit("sendMsg", data, () => {
       setText("");
     });
   };

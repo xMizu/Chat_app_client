@@ -7,30 +7,6 @@
   border-radius: 0.2rem;
 }
 
-.inputContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 5%;
-  padding: 0 0.75rem 0.75rem 0.75rem;
-}
-
-.inputContainer input {
-  width: 90%;
-  height: 50%;
-  border-radius: 0.2rem;
-  border: 1px solid black;
-}
-
-.inputContainer button {
-  color: white;
-  background: #2589bd;
-  border-radius: 0.3rem;
-  border-style: none;
-  height: 65%;
-  text-align: center;
-}
-
 .messagesContainer {
   height: 90%;
   padding: 0.75rem;

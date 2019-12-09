@@ -1,0 +1,9 @@
+.outer-container {
+  background: "tomato";
+  display: flex;
+}
+
+.container {
+  background: "dodger blue";
+  align-self: center;
+}

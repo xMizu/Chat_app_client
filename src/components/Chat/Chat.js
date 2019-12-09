@@ -3,7 +3,7 @@ import "./Chat.css";
 import Messages from "../Messages/Messages";
 import Input from "../Input/Input";
 
-const Chat = ({ socket }) => {
+const Chat = ({ socket, user }) => {
   const [text, setText] = useState("");
   const [messages, setMessages] = useState([]);
 
@@ -18,7 +18,7 @@ const Chat = ({ socket }) => {
       <div className="messagesContainer">
         <Messages messages={messages} />
       </div>
-      <Input text={text} setText={setText} socket={socket} />
+      <Input text={text} setText={setText} socket={socket} user={user} />
     </div>
   );
 };
