@@ -1,29 +1,21 @@
-import React from "react";
-import Room from "./components/Room";
-import Chat from "./components/Chat";
-import Message from "./components/Message";
+import React, { useEffect } from "react";
+import Chat from "./components/Chat/Chat";
+import "./App.css";
+import io from "socket.io-client";
 
 const App = () => {
-  const outerContainer = {
-    width: "80%",
-    margin: "auto",
-    background: "grey",
-    display: "flex"
-  };
+  let socket;
+  const BACKEND = "http://localhost:3100/";
 
-  const innerContainer = {
-    flexDirection: "column",
-    width: "100%",
-    margin: "none"
-  };
+  socket = io.connect(BACKEND);
+
+  useEffect(() => {
+    console.log("checking if this will re-render");
+  }, [BACKEND]);
 
   return (
-    <div style={outerContainer}>
-      <Room />
-      <div style={innerContainer}>
-        <Chat />
-        <Message />
-      </div>
+    <div className="outerContainer">
+      <Chat socket={socket} />
     </div>
   );
 };
